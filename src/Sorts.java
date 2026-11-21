@@ -1,11 +1,13 @@
 import java.util.Random;
 
 public class Sorts {
+    public static long comparisons = 0;
+
     public static int[] initValues(int size) {
         Random rand = new Random();
         int[] values = new int[size];
         for (int i = 0; i < size; i++) {
-            values[i] = rand.nextInt(1001); // 0 to 1000
+            values[i] = rand.nextInt(1001);
         }
         return values;
     }
@@ -38,6 +40,7 @@ public class Sorts {
     public static int minIndex(int[] values, int startIndex, int endIndex) {
         int indexOfMin = startIndex;
         for (int i = startIndex + 1; i <= endIndex; i++) {
+            comparisons++;
             if (values[i] < values[indexOfMin]) {
                 indexOfMin = i;
             }
@@ -73,6 +76,7 @@ public class Sorts {
         int saveFirst = leftFirst;
 
         while (leftFirst <= leftLast && rightFirst <= rightLast) {
+            comparisons++;
             if (values[leftFirst] <= values[rightFirst]) {
                 tempArray[index] = values[leftFirst];
                 leftFirst++;
