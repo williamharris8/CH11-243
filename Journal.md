@@ -1,2 +1,1 @@
-# Journal
-Write your Journal questions and notes here.
+PHASE 1 - swap() would be useful once sorting begins. Since it is moving values into the right positions.

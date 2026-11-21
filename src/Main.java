@@ -1,5 +1,7 @@
 public class Main {
-    static void main() {
-        System.out.println("Hello World!");
+    public static void main(String[] args) {
+        int[] values = Sorts.initValues(50);
+        Sorts.printValues(values);
+        System.out.println("Sorted? " + Sorts.isSorted(values));
     }
 }
